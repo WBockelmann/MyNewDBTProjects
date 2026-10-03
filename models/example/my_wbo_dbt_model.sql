@@ -1,6 +1,6 @@
 {{ config(materialized='table') }}
 
-with source_data_cte as (
+with source_data_cte2 as (
 
     select 1 as id
     union all
@@ -10,7 +10,7 @@ with source_data_cte as (
 
 
 select *
-from source_data_cte
+from source_data_cte2
 
 /*
     Uncomment the line below to remove records with null `id` values
